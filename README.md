@@ -310,25 +310,37 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
-
 #include <stdio.h>
 
 int main() {
+    int i, j, n, k;
 
-    printf("12345\n");
-    
-    printf("2   4\n");
-    
-    printf("3   3\n");
-    
-    printf("4   2\n");
-    
-    printf("54321\n");
-    
+    printf("Enter n: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++) {
+
+        for (j = i; j <= n; j++) {
+            if (i == 1 || j == i)
+                printf("%d", j);
+            else
+                printf(" ");
+        }
+
+        k = j - 2;
+        for (j = 1; j < i; j++) {
+            if (i == n || j == i - 1)
+                printf("%d", k);
+            else
+                printf(" ");
+            k--;
+        }
+
+        printf("\n");
+    }
+
     return 0;
-    
 }
-
 # Output:
 
 <img width="817" height="322" alt="Screenshot 2025-11-19 140130" src="https://github.com/user-attachments/assets/6948b25b-125f-4782-a090-4fcc1d6877a5" />
